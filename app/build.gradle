@@ -1,0 +1,58 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.example.gtproject'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.example.gtproject"
+        minSdk 24
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+        signingConfigs {
+            release {
+                keyAlias 'gsls'
+                keyPassword 'gsls123456'
+                storeFile file('E:/works/AS/GTProject/gsls.jks')//填写你自己创建的 jks (创建在打包那边创建)
+                storePassword 'gsls123456'
+            }
+        }
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true//混淆
+            shrinkResources true // 删除无用资源
+            zipAlignEnabled true  // Zipalign优化
+//            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug{
+//            signingConfig signingConfigs.release
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.5.1'
+    implementation 'com.google.android.material:material:1.6.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+    //GT库 API 地址:https://blog.csdn.net/qq_39799899
+    implementation 'com.github.1079374315:GSLS_Tool:v1.4.2.4'
+    annotationProcessor 'com.github.1079374315:GSLS_Tool:v1.4.2.4'
+}
