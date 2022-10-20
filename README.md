@@ -7,4 +7,7 @@
 
 #### [感谢小伙伴们对GT库的支持，本教程重点是看透GT架构，不是玩游戏哦](https://github.com/1079374315/GT)
 
+## [导入 AndroidStudio 后记得 Build 一下]
+
+
 
