@@ -53,6 +53,6 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
     //GT库 API 地址:https://blog.csdn.net/qq_39799899
-    implementation 'com.github.1079374315:GSLS_Tool:v1.4.2.4'
-    annotationProcessor 'com.github.1079374315:GSLS_Tool:v1.4.2.4'
+    implementation 'com.github.1079374315:GSLS_Tool:v1.4.2.6'
+    annotationProcessor 'com.github.1079374315:GSLS_Tool:v1.4.2.6'
 }

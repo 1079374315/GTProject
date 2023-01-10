@@ -3,10 +3,8 @@ package com.example.gtproject.view.fragment;
 import android.os.Bundle;
 import android.view.View;
 
-import com.example.gtproject.MyApplication;
 import com.example.gtproject.R;
-import com.example.gtproject.model.http.bean.JsonRootBean;
-import com.example.gtproject.viewModel.AllFragmentViewModel;
+import com.example.gtproject.viewModel.ViewModelAll;
 import com.gsls.gt.GT;
 import com.gsls.gt_databinding.annotation.GT_DataBinding;
 
@@ -16,7 +14,7 @@ import com.gsls.gt_databinding.annotation.GT_DataBinding;
  */
 @GT_DataBinding(setLayout = "fragment_main", setBindingType = GT_DataBinding.Fragment)
 @GT.Annotations.GT_AnnotationFragment(R.layout.fragment_main)
-public class MainFragment extends MainFragmentBinding<AllFragmentViewModel<?>> {// 继承 LoginFragmentBinding 类后，会自动获取组件并支持 ViewModel
+public class MainFragment extends MainFragmentBinding<ViewModelAll<?>> {// 继承 LoginFragmentBinding 类后，会自动获取组件并支持 ViewModel
 
     //开始游戏按钮
     private String imgUrl = "https://s1.chu0.com/src/img/png/60/606dd756a10d402ebfade10fad163eca.png" +

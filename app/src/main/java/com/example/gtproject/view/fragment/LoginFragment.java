@@ -8,7 +8,7 @@ import com.example.gtproject.MyApplication;
 import com.example.gtproject.R;
 import com.example.gtproject.model.sql.table.UserBean;
 import com.example.gtproject.view.activity.MainActivity;
-import com.example.gtproject.viewModel.AllFragmentViewModel;
+import com.example.gtproject.viewModel.ViewModelAll;
 import com.gsls.gt.GT;
 import com.gsls.gt_databinding.annotation.GT_DataBinding;
 
@@ -21,7 +21,7 @@ import java.util.List;
  */
 @GT_DataBinding(setLayout = "fragment_login", setBindingType = GT_DataBinding.Fragment)
 @GT.Annotations.GT_AnnotationFragment(R.layout.fragment_login)
-public class LoginFragment extends LoginFragmentBinding<AllFragmentViewModel<?>> {// 继承 LoginFragmentBinding 类后，会自动获取组件并支持 ViewModel
+public class LoginFragment extends LoginFragmentBinding<ViewModelAll<?>> {// 继承 LoginFragmentBinding 类后，会自动获取组件并支持 ViewModel
 
     //这条链接是一个 gif 动态图
     String imgUrl = "https://s1.chu0.com/src/img/gif/08/087ea3c232c344a98badfe5728d444f8.gif" +

@@ -10,13 +10,11 @@ import java.util.List;
 
 /**
  * @param <T>
- * @模块类型: 公共的 ViewModel (所有Fragment的 ViewModel)
- * @描述： 为啥说是 所有Fragment 的 ViewModel 呢？
- * 因为 extends GT.GT_Fragment.DataBindingFragment 这行代码就指定了
- * 这个 ViewModel 只让 继承了 DataBindingFragment 的Fragment才能使用
+ * @模块类型: 公共的 ViewModel (所有页面的 ViewModel)
+ * @描述： 所有集成了 GT库封装类的 页面均可以直接使用这里的 ViewModel
  * TODO 注意,一般 公共的 ViewModel 是很少会有改动的，几乎不用改动，但一旦修改了公共的 ViewModel 那么引用了 ViewModel 里方法的 View层就会收到影响，而没有引用到的 View则不会有任何影响
  */
-public class AllFragmentViewModel<T extends GT.GT_Fragment.DataBindingFragment> extends GT.Frame.GT_BindingViewModel<T, Model<?>> {
+public class ViewModelAll<T extends GT.Frame.ViewModelFeedback> extends GT.Frame.GT_BindingViewModel<T, Model<?>> {
 
     //登录账号 （向数据库Model拿数据）
     public boolean login(UserBean userBean) {
